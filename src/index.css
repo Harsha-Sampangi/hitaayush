@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-sans;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-200 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-navy-300;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+  .glass-dark {
+    @apply bg-navy-500/80 backdrop-blur-xl border border-white/10 shadow-lg;
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/30 shadow-md rounded-2xl;
+  }
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-sm;
+  }
+  .btn-primary {
+    @apply bg-healthcare hover:bg-healthcare-500 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-navy border border-gray-200 font-medium px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-md active:scale-[0.98];
+  }
+  .btn-teal {
+    @apply bg-teal hover:bg-teal-500 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg active:scale-[0.98];
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6 transition-all duration-200 hover:shadow-md;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-success {
+    @apply badge bg-success/10 text-success;
+  }
+  .badge-warning {
+    @apply badge bg-warning/10 text-warning;
+  }
+  .badge-error {
+    @apply badge bg-error/10 text-error;
+  }
+  .badge-info {
+    @apply badge bg-healthcare/10 text-healthcare;
+  }
+}
